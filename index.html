@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unreal V-Bucks Calculation</title>
+    <style>
+        body {
+            background: url('https://i.ibb.co/HPynhXP/image.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #multiplicationBox {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        }
+        input[type=number], button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="multiplicationBox">
+        <h1>Unreal V-Bucks Price Checker</h1>
+        <p>Enter the cost in V-Bucks for the item you want</p>
+        <input id="inputNumber" type="number" placeholder="Enter a number">
+        <button onclick="multiply()">Price Check</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function multiply() {
+            var num = document.getElementById("inputNumber").value;
+            var result = Math.ceil(num * 0.00118518518);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
